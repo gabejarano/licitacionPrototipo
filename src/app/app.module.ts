@@ -12,6 +12,7 @@ import { NavegacionComponent } from './componentes/navegacion/navegacion.compone
 import { ListarComponent } from './componentes/licitaciones/listar/listar.component';
 import { CargarComponent } from './componentes/licitaciones/cargar/cargar.component';
 import { CrearComponent } from './componentes/licitaciones/crear/crear.component';
+import { InicioComponent } from './componentes/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CrearComponent } from './componentes/licitaciones/crear/crear.component
     NavegacionComponent,
     ListarComponent,
     CargarComponent,
-    CrearComponent
+    CrearComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

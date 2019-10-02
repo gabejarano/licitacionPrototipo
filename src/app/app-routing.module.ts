@@ -5,12 +5,17 @@ import {DashboardComponent} from './componentes/dashboard/dashboard.component';
 import {ListarComponent} from './componentes/licitaciones/listar/listar.component';
 import {CargarComponent} from './componentes/licitaciones/cargar/cargar.component';
 import {CrearComponent} from './componentes/licitaciones/crear/crear.component';
+import {InicioComponent} from './componentes/inicio/inicio.component'
 
 import { AuthGuard } from './guards/auth.guard';
 import {NoGuardGuard} from './guards/no-guard.guard';
 
 
 const routes: Routes = [
+  {
+    path:'',
+    component: InicioComponent
+  },
   {
     path: 'login',
     component: LoginComponent,
