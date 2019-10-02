@@ -1,0 +1,63 @@
+<div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            licitaciones disponibles</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Referencia</th>
+                    <th>Fase actual</th>
+                    <th>Fecha publicación</th>
+                    <th>Fecha limite presentación ofertas</th>
+                    <th>Descargar archivos</th>
+                    <th *ngIf="logueadoProveedor">Formulario</th>
+                    <th *ngIf="logueadoTechEdge">Enviar correo a proveedores</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>Contratacion equipos computo</td>
+                    <td>Se requiere contratr equipos de computo con tengan la capacidad de procesar diferentes procesos detallados en el documento</td>
+                    <td>REF-457539</td>
+                    <td>Presentación de oferta</td>
+                    <td>30/09/2019</td>
+                    <td>30/10/2019</td>
+                    <td><i class="fas fa-file-download"></i></td>
+                    <td >
+                      <div *ngIf="logueadoProveedor">
+                          <button  type="submit" class="btn btn-black" routerLink="/licitaciones/cargar"> Cargar</button>
+                      </div>
+                      <div *ngIf="logueadoTechEdge">
+                          <button  type="submit" class="btn btn-primary" (click)="mandarCorreos()">Enviar Correos</button>
+                      </div>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Materiales de papeleria</td>
+                    <td>Descripcion</td>
+                    <td>REF-17845278</td>
+                    <td>Presentacion de oferta</td>
+                    <td>15/09/2019</td>
+                    <td>15/10/2019</td>
+                    <td><i class="fas fa-file-download"></i></td>
+                    <td >
+                        <div *ngIf="logueadoProveedor">
+                            <button  type="submit" class="btn btn-black" routerLink="/licitaciones/cargar"> Cargar</button>
+                        </div>
+                        <div *ngIf="logueadoTechEdge">
+                            <button  type="submit" class="btn btn-primary" (click)="mandarCorreos()">Enviar Correos</button>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
